@@ -26,6 +26,7 @@ body {
           flex-direction: column;
   position: relative;
   background: radial-gradient(#af67e9, #6565e7);
+  overflow: hidden;
 }
 
 .main #background-image-1-mobile {
