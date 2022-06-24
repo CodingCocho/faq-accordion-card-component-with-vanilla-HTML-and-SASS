@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="/styles/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>FAQ Accordion Card Component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
+<body>
+  <!-- Holds the main web application -->
+  <section class="main">
+    <!-- Holds the first background image -->
+    <img src="/images/illustration-woman-online-mobile.svg" alt="background-image-1-mobile" id="background-image-1-mobile">
+    <!-- Image container for desktop view -->
+    <div class="desktop-image-container">
+      <img src="./images/illustration-woman-online-desktop.svg" alt="background-image-1-desktop" id="background-image-1-desktop">
+      <img src="./images/bg-pattern-desktop.svg" alt="background-image-2-desktop" id="background-image-2-desktop">
+    </div>
+    <!-- Holds the card component -->
+    <div class="card">
+      <!-- Holds the background image at the top of the card component -->
+      <img src="/images/bg-pattern-mobile.svg" alt="background-image-2-mobile" id="background-image-2-mobile">
+      
+      <h1 id="faq">FAQ</h1>
+      <!-- Hold the container for the accordion component -->
+      <div class="accordion">
+        <!-- Hold an accordion item -->
+        <div class="accordionItem">
+          <!-- Hold the clickable tab for the accordion -->
+          <div class="accordion-Tab" onclick="toggle(this)" id="tab-1">
+            <p class="accordionTitle">How many team members can I invite?</p>
+            <img src="./images/icon-arrow-down.svg" alt="arrow-down">
+          </div>
+          <!-- Hold the content for the accordion tab -->
+          <div class="accordionContent" id="content-1">
+            <p>You can invite up to 2 additional users on the Free plan. There is no limit on 
+              team members for the Premium plan.</p>
+          </div>
+        </div>
+        <div class="accordionItem">
+          <div class="accordion-Tab" onclick="toggle(this)" id="tab-2">
+            <p class="accordionTitle">What is the maximum file upload size?</p>
+            <img src="./images/icon-arrow-down.svg" alt="arrow-down">
+          </div>
+          <div class="accordionContent" id="content-2">
+            <p> No more than 2GB. All files in your account must fit your allotted storage space.</p>
+          </div>
+        </div>
+        <div class="accordionItem">
+          <div class="accordion-Tab" onclick="toggle(this)" id="tab-3">
+            <p class="accordionTitle">How do I reset my password?</p>
+            <img src="./images/icon-arrow-down.svg" alt="arrow-down">
+          </div>
+          <div class="accordionContent" id="content-3">
+            <p>Click “Forgot password” from the login page or “Change password” from your profile page.
+              A reset link will be emailed to you.</p>
+          </div>
+        </div>
+        <div class="accordionItem">
+          <div class="accordion-Tab" onclick="toggle(this)" id="tab-4">
+            <p class="accordionTitle">Can I cancel my subscription?</p>
+            <img src="./images/icon-arrow-down.svg" alt="arrow-down">
+          </div>
+          <div class="accordionContent" id="content-4">
+            <p>Yes! Send us a message and we’ll process your request no questions asked.</p>
+          </div>
+        </div>
+        <div class="accordionItem">
+          <div class="accordion-Tab" onclick="toggle(this)" id="tab-5">
+            <p class="accordionTitle">Do you provide additional support?</p>
+            <img src="./images/icon-arrow-down.svg" alt="arrow-down">
+          </div>
+          <div class="accordionContent" id="content-5">
+            <p>Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="/utilities/main.js"></script>
+</body>
+</html>

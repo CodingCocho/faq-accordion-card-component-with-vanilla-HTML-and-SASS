@@ -1,0 +1,190 @@
+*
+{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body
+{
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.main
+{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    background: radial-gradient(hsl(273, 75%, 66%),hsl(240, 73%, 65%));
+    #background-image-1-mobile
+    {
+        height: 125px;
+        width: 125px;
+        position: relative;
+        top: 52.5px;
+        z-index: 1;
+    }
+    .card
+    {
+        border-radius: 20px;
+        background-color: white;
+        width: 350px;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+        padding-bottom: 20px;
+        #background-image-2-mobile
+        {
+            height: 50px;
+            width: 125px;
+            position: relative;
+            top: 0px;
+        }
+        .accordion
+        {
+            display: block;
+            width: 85%;
+            .accordionItem
+            {
+                border-bottom: 2px solid  hsl(240, 5%, 91%);
+                margin-left: 20px;
+                margin-right: 20px;
+                .accordion-Tab
+                {
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+            }
+        }
+    }
+}
+
+.accordionTitle {
+	cursor: pointer;
+	user-select: none;
+    font-size: 12px;
+    color: hsl(238, 29%, 16%);
+}
+
+.open
+{
+    display: block;
+}
+
+.closed
+{
+    display: none;
+}
+
+.accordionContent
+{
+    font-size: 10px;
+    max-width: 100%;
+    color: hsl(237, 12%, 33%);
+}
+
+#faq
+{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.accordion-Tab:hover
+{
+    p
+    {
+        color: hsl(14, 88%, 65%);
+    }
+}
+
+.selected-title
+{
+    font-weight: 700;
+    color: black;
+}
+
+.rotate-up
+{
+    transform: rotate(180deg);
+}
+
+.desktop-image-container
+{
+    display: none;
+    img
+    {
+        display: none;
+    }
+}
+
+
+
+@media screen and (min-width: 1024px) 
+{
+    .main
+    {
+        flex-direction: row;
+        .card
+        {
+            width: 800px;
+            justify-content: flex-start;
+            align-items: flex-start;
+            text-align: left;
+        }
+    }
+    #background-image-1-mobile,#background-image-2-mobile
+    {
+        display: none;
+    }
+    .desktop-image-container
+    {
+        display: flex;
+        flex-direction: column;
+        img
+        {
+            display: block;
+            position: relative;
+            height: 350px;
+            width: 350px;
+            z-index: 1;
+        }
+    }
+    .accordionTitle
+    {
+        font-size: 1.5rem;
+    }
+    .accordionContent
+    {
+        font-size: 1.25rem;
+    }
+    #faq
+    {
+        font-size: 1.75rem;
+        padding-top: 20px;
+        margin-left: 140px;
+    }
+    .accordion
+    {
+        margin-left: 120px;
+    }
+    #background-image-1-desktop
+    {
+        top: 125px;
+        right: -125px;
+    }
+    #background-image-2-desktop
+    {
+        top: -200px;
+        right: -125px;
+    }
+}
